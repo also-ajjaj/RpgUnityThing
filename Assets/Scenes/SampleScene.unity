@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -256,6 +257,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2189f963773134c0fa8be8ebe66c5542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollowPlayer
+  target: {fileID: 1209783851}
+  speed: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +366,7 @@ GameObject:
   - component: {fileID: 1209783851}
   - component: {fileID: 1209783853}
   - component: {fileID: 1209783852}
+  - component: {fileID: 1209783854}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -414,6 +430,91 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 500
+  lastDirection: 0
+--- !u!114 &1209783854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209783850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34bb32a31c6c14339914c30f9ccc8836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteAnimator
+  spriteRenderer: {fileID: 1721828809}
+  animations:
+  - animationName: WalkUp
+    frames:
+    - {fileID: -982904232830982447, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: 2416434504916517810, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: 1008816216748069464, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: -1022273897, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    frameTags: []
+    frameRate: 8
+    loop: 1
+    unstoppable: 0
+  - animationName: WalkDown
+    frames:
+    - {fileID: 4035959289877228764, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: 1553940418269799609, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: 7500509103958437945, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: -1283221536, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    frameTags: []
+    frameRate: 8
+    loop: 1
+    unstoppable: 0
+  - animationName: WalkLeft
+    frames:
+    - {fileID: -350908408369970039, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: -6428935122508569504, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: -1441789555, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: 1604056930, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    frameTags: []
+    frameRate: 8
+    loop: 1
+    unstoppable: 0
+  - animationName: WalkRight
+    frames:
+    - {fileID: -5409570386352685021, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: 7144598999076838305, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: 816196902, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    - {fileID: 69613625, guid: f228aadb599c34f669f10d97f8d8deba, type: 3}
+    frameTags: []
+    frameRate: 8
+    loop: 1
+    unstoppable: 0
+  - animationName: IdleDown
+    frames:
+    - {fileID: 4723107735738678597, guid: 8ad94f0757ffd43448329f92647b4170, type: 3}
+    frameTags: []
+    frameRate: 8
+    loop: 1
+    unstoppable: 0
+  - animationName: IdleUp
+    frames:
+    - {fileID: -7385789195546760866, guid: 8ad94f0757ffd43448329f92647b4170, type: 3}
+    frameTags: []
+    frameRate: 8
+    loop: 1
+    unstoppable: 0
+  - animationName: IdleLeft
+    frames:
+    - {fileID: 3234629978573100161, guid: 8ad94f0757ffd43448329f92647b4170, type: 3}
+    frameTags: []
+    frameRate: 8
+    loop: 1
+    unstoppable: 0
+  - animationName: IdleRight
+    frames:
+    - {fileID: 1419694560, guid: 8ad94f0757ffd43448329f92647b4170, type: 3}
+    frameTags: []
+    frameRate: 8
+    loop: 1
+    unstoppable: 0
+  currentFrameTag: null
+  debug: 0
 --- !u!1 &1721828807
 GameObject:
   m_ObjectHideFlags: 0
