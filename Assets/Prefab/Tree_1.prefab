@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3353283194167125866}
   - component: {fileID: 6083827576346108960}
-  - component: {fileID: 2175881935758809228}
+  - component: {fileID: 338977275178567375}
   m_Layer: 0
   m_Name: Tree_1
   m_TagString: Untagged
@@ -91,8 +91,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2175881935758809228
-BoxCollider2D:
+--- !u!70 &338977275178567375
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,15 +125,6 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.004299283, y: 0.25277168}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2, y: 1.8125}
-    newSize: {x: 2, y: 1.8125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.595875, y: 0.3679688}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.007840249, y: 0.23176262}
+  m_Size: {x: 1.2630192, y: 0.5260319}
+  m_Direction: 1
